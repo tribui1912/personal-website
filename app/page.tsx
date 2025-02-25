@@ -10,6 +10,27 @@ import AnimatedRobot from "@/components/AnimatedRobot"
 export default function Home() {
   const title = "Welcome to My Portfolio"
 
+  const titleVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        staggerChildren: 0.1,
+      },
+    },
+  }
+
+  const letterVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  }
+
   return (
     <div className="relative w-full h-full flex items-center justify-center px-4">
       {/* Animated background */}
@@ -22,14 +43,29 @@ export default function Home() {
       <AnimatedRobot />
       
       <div className="z-10 text-center space-y-4 md:space-y-6 max-w-4xl mx-auto">
-        <motion.h1 
-          className="text-3xl md:text-5xl font-bold"
-          initial={{ opacity: 0, y: -50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <span className="gradient-text">{title}</span>
-        </motion.h1>
+        <div className="text-3xl md:text-5xl font-bold relative">
+          <motion.div initial="hidden" animate="visible" variants={titleVariants}>
+            {title.split("").map((char, index) => (
+              <motion.span
+                key={index}
+                variants={letterVariants}
+                className="gradient-text inline-block cursor-default"
+                whileHover={{
+                  y: -10,
+                  scale: 1.2,
+                  transition: { 
+                    type: "spring", 
+                    stiffness: 500, 
+                    damping: 10,
+                    mass: 0.8,
+                  },
+                }}
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+          </motion.div>
+        </div>
         <motion.p
           className="text-lg md:text-xl"
           initial={{ opacity: 0 }}
