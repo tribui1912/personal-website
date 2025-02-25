@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import ParticleBackground from "@/components/ParticleBackground"
@@ -9,7 +8,6 @@ import GlowingButton from "@/components/GlowingButton"
 import AnimatedRobot from "@/components/AnimatedRobot"
 
 export default function Home() {
-  const [isHovered, setIsHovered] = useState(false)
 
   const titleVariants = {
     hidden: { opacity: 0, y: -50 },
@@ -69,7 +67,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          Hi, I'm Tri Bui. I'm a computer engineering student passionate about embedded systems, software development and homelab.
+          Hi, I&apos;m Tri Bui. I&apos;m a computer engineering student passionate about embedded systems, software development and homelab.
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
