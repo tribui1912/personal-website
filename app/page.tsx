@@ -8,28 +8,6 @@ import GlowingButton from "@/components/GlowingButton"
 import AnimatedRobot from "@/components/AnimatedRobot"
 
 export default function Home() {
-
-  const titleVariants = {
-    hidden: { opacity: 0, y: -50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        staggerChildren: 0.1,
-      },
-    },
-  }
-
-  const letterVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5 },
-    },
-  }
-
   const title = "Welcome to My Portfolio"
 
   return (
@@ -44,23 +22,14 @@ export default function Home() {
       <AnimatedRobot />
       
       <div className="z-10 text-center space-y-4 md:space-y-6 max-w-4xl mx-auto">
-        <div className="text-3xl md:text-5xl font-bold relative">
-          <motion.div initial="hidden" animate="visible" variants={titleVariants}>
-            {title.split("").map((char, index) => (
-              <motion.span
-                key={index}
-                variants={letterVariants}
-                className="inline-block cursor-default bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text"
-                whileHover={{
-                  y: -10,
-                  transition: { duration: 0.2, ease: "easeOut" },
-                }}
-              >
-                {char === " " ? "\u00A0" : char}
-              </motion.span>
-            ))}
-          </motion.div>
-        </div>
+        <motion.h1 
+          className="text-3xl md:text-5xl font-bold relative bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text"
+          initial={{ opacity: 0, y: -50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {title}
+        </motion.h1>
         <motion.p
           className="text-lg md:text-xl"
           initial={{ opacity: 0 }}
