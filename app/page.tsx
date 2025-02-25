@@ -23,12 +23,12 @@ export default function Home() {
       
       <div className="z-10 text-center space-y-4 md:space-y-6 max-w-4xl mx-auto">
         <motion.h1 
-          className="text-3xl md:text-5xl font-bold relative bg-gradient-to-r from-blue-500 to-purple-600 text-transparent bg-clip-text"
+          className="text-3xl md:text-5xl font-bold"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {title}
+          <span className="gradient-text">{title}</span>
         </motion.h1>
         <motion.p
           className="text-lg md:text-xl"
