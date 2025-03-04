@@ -7,19 +7,19 @@ import AnimatedRobot from "@/components/AnimatedRobot"
 const projects = [
   {
     title: "Home Lab Server Cluster",
-    description: "A personal homelab setup for learning, testing, and hosting various services. Built with 3 Dell 7010 Micro PCs and configured for high availability and resource efficiency.",
+    description: "A personal homelab setup for learning, testing, and hosting various services. Built with Dell T7820, Dell VXRail P470 and configured for high availability and resource efficiency with 10Gbe supports.",
     technologies: ["Proxmox", "Docker", "pfSense", "TrueNAS", "Home Assistant"],
     link: "https://github.com/tribui1912/homelab",
     imageSrc: "/projects/homelab.jpg",
-    imageAlt: "Home lab server setup with 3 Dell 7010 Micro PCs"
+    imageAlt: "Homelab server setup with mutliple services with high avaibility"
   },
   {
     title: "Kubernetes Home Cluster",
-    description: "A production-grade Kubernetes cluster running on Dell 7010 Micro PCs. This project demonstrates infrastructure as code, GitOps workflows, and cloud-native application deployments.",
-    technologies: ["Kubernetes", "K3s", "Helm", "Flux CD", "Prometheus", "Grafana"],
+    description: "A production-grade Kubernetes cluster running on 3x Dell 7010. This project demonstrates infrastructure as code, GitOps workflows, and cloud-native application deployments.",
+    technologies: ["Kubernetes", "K3s"],
     link: "https://github.com/tribui1912/k8s-home-cluster",
     imageSrc: "/projects/kubernetes.jpg",
-    imageAlt: "Kubernetes cluster visualization"
+    imageAlt: "Kubernetes cluster visualization with 3x Dell 7010"
   }
 ]
 
