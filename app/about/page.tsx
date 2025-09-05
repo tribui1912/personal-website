@@ -177,8 +177,8 @@ export default function About() {
               <div className="space-y-2">
                 <p className="flex items-center">
                   <span className="font-medium mr-2">Website:</span>
-                  <a href="https://tribui.io/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                    tribui.io
+                  <a href="https://tribui.me/" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                    tribui.me
                   </a>
                 </p>
                 <p className="flex items-center">
