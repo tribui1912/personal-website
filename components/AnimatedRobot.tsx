@@ -30,7 +30,10 @@ export default function AnimatedRobot() {
     
     return () => {
       window.removeEventListener("mousemove", handleMouseMove)
-      document.head.removeChild(style)
+      // Check if style element still exists before removing
+      if (style.parentNode) {
+        document.head.removeChild(style)
+      }
     }
   }, [])
   

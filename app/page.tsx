@@ -2,10 +2,8 @@
 
 import Link from "next/link"
 import { motion } from "framer-motion"
-import ParticleBackground from "@/components/ParticleBackground"
-import PixelCat from "@/components/PixelCat"
+import { ParticleBackground, PixelCat, AnimatedRobot } from "@/components/ClientOnlyComponents"
 import GlowingButton from "@/components/GlowingButton"
-import AnimatedRobot from "@/components/AnimatedRobot"
 
 export default function Home() {
   const title = "Welcome to My Portfolio"
@@ -72,7 +70,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          Hi, I&apos;m Tri Bui. I&apos;m a computer engineering student passionate about embedded systems, software development and homelab.
+          Hi, I&apos;m Tri Bui. I&apos;m a Computer Engineering student at San Diego State University, passionate about full-stack web development, homelab infrastructure, and teaching technology to others.
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
@@ -81,6 +79,16 @@ export default function Home() {
           className="flex flex-col sm:flex-row gap-4 justify-center items-center mt-12"
         >
           <GlowingButton href="/projects">Explore My Projects</GlowingButton>
+          
+          <Link href="/about">
+            <motion.button 
+              className="px-6 py-3 rounded-full bg-background border border-border hover:bg-accent hover:text-accent-foreground transition-colors duration-300"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Learn About Me
+            </motion.button>
+          </Link>
           
           <Link href="https://github.com/tribui1912" target="_blank" rel="noopener noreferrer">
             <motion.button 

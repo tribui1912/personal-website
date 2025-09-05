@@ -5,8 +5,11 @@ import { useState, useEffect } from "react"
 
 export default function PixelCat() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
+    setMounted(true)
+    
     const handleMouseMove = (e: MouseEvent) => {
       setMousePosition({ x: e.clientX, y: e.clientY })
     }
@@ -17,6 +20,8 @@ export default function PixelCat() {
       window.removeEventListener("mousemove", handleMouseMove)
     }
   }, [])
+
+  if (!mounted) return null
 
   return (
     <motion.div
