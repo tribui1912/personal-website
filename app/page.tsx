@@ -70,7 +70,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2, duration: 0.5 }}
         >
-          Hi, I&apos;m Tri Bui. I&apos;m a Computer Engineering student at San Diego State University, passionate about full-stack web development, homelab infrastructure, and teaching technology to others.
+          Founding Software Engineer building FDA-regulated medical technology. Serial entrepreneur across the US and Southeast Asia. Based in San Diego.
         </motion.p>
         <motion.div
           initial={{ opacity: 0 }}
